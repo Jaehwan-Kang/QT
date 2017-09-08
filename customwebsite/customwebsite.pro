@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-09-07T16:43:10
+# Project created by QtCreator 2017-09-07T16:03:27
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui webenginewidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Mywidget
+TARGET = customwebsite
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,11 +25,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        customwebsite.cpp
 
 HEADERS += \
-        widget.h \
+        customwebsite.h \
     config.h
 
 FORMS += \
-        widget.ui
+        customwebsite.ui

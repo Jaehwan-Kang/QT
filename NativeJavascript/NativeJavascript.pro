@@ -1,21 +1,21 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-09-07T16:43:10
+# Project created by QtCreator 2017-09-04T19:18:23
 #
 #-------------------------------------------------
 
-QT       += core gui webenginewidgets
+QT       += core gui webengine webenginewidgets widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Mywidget
+TARGET = NativeJavascript
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DEPRECATED_WARNINGS "BUILD_DIR=\"\\\""$$OUT_PWD"\\\"\""
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -25,11 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        mainwindow.cpp \
+    myclass.cpp \
+    mywebengineview.cpp
 
 HEADERS += \
-        widget.h \
-    config.h
+        mainwindow.h \
+    myclass.h \
+    mywebengineview.h
 
 FORMS += \
-        widget.ui
+        mainwindow.ui
+
+html.files = index.html
+
+html.path = $$OUT_PWD
+COPIES += html

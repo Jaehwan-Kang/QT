@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-09-07T16:43:10
+# Project created by QtCreator 2017-09-05T11:32:25
 #
 #-------------------------------------------------
 
-QT       += core gui webenginewidgets
+QT       += core gui webchannel webengine webenginewidgets widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Mywidget
+TARGET = qwebchannel_test
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,11 +25,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        mainwindow.cpp \
+    myclass.cpp \
+    mywebengineview.cpp
 
 HEADERS += \
-        widget.h \
-    config.h
+        mainwindow.h \
+    myclass.h \
+    mywebengineview.h
 
 FORMS += \
-        widget.ui
+        mainwindow.ui
+
+DISTFILES += \
+    index.html \
+    qwebchannel.js \
+    mac.html \
+    mmsv_open_webhard.js
+

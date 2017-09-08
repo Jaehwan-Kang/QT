@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-09-07T16:43:10
+# Project created by QtCreator 2017-09-08T11:08:42
 #
 #-------------------------------------------------
 
-QT       += core gui webenginewidgets
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Mywidget
+TARGET = DynamicLayouts
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,11 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        dialog.cpp
 
 HEADERS += \
-        widget.h \
-    config.h
+        dialog.h
 
 FORMS += \
-        widget.ui
+        dialog.ui

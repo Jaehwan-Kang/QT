@@ -1,10 +1,10 @@
-#include "widget.h"
+#include "customwebsite.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Widget w;
+    customwebsite w;
     w.show();
 
     return a.exec();

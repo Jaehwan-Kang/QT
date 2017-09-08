@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-09-07T16:43:10
+# Project created by QtCreator 2017-09-05T17:27:37
 #
 #-------------------------------------------------
 
-QT       += core gui webenginewidgets
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Mywidget
+TARGET = AddressBook
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,11 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        addressbook.cpp \
+    finddialog.cpp
 
 HEADERS += \
-        widget.h \
-    config.h
+        addressbook.h \
+    finddialog.h
 
 FORMS += \
-        widget.ui
+        addressbook.ui

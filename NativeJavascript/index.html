@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script language="JavaScript">
+
+        function test() {
+        new QWebChannel(qt.webChannelTransport, function(channel) {
+            alert('ok');
+            jshelper = channel.objects.jshelper;
+            alert(jshelper.num);
+            jshelper.print();
+            }
+        }
+        </script>
+
+
+    </head>
+
+    <body>
+        <input type="button" value="TEST BUTTON" style="height: 120pt; width: 200pt; onclick="test()">
+    </body>
+</html>
