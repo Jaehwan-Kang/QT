@@ -1,3 +1,5 @@
+// downloadinfo //
+
 {"fileinfo":
     [   {   "item":"P44774934",
             "path":"%2Fdshlksa.mkv",
@@ -21,3 +23,7 @@
         "userpw":"e77d9855c85a2815878a5ae211cccdae1018475d4250601de4cddd254891ac32",
         "datas":"125.131.127.115"
 }
+
+
+<span class="btn_n_close" onclick="FC_APP_FN.onclickNeverOpenModal(this);"></span>
+<span class="btn_n_close hand" onclick="FC_APP_FN.onclickNeverOpenModal(this);"></span>

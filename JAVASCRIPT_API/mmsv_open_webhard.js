@@ -16,7 +16,7 @@ function mmsv_checkAll(bcall) {
         form.chkall.checked = bcheck;
     }
 
-    // Æú´õ Ã¼Å©
+    // ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
     var chkBox = form.elements['mmsv_trans_folder'];
     var chkLen = chkBox.length;
 
@@ -28,7 +28,7 @@ function mmsv_checkAll(bcall) {
         }
     }
 
-    // ÆÄÀÏ Ã¼Å©
+    // ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
     var chkBox = form.elements['mmsv_trans_file'];
     var chkLen = chkBox.length;
 
@@ -52,19 +52,19 @@ function mmsv_downloadFile(cooperation_info) {
 
     if (mmsv_isChecked()) {
         mmsv_Trans_Make();
-        //mureka post°ª ¸¸µé±â
+        //mureka postï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (cooperation_info) form.cooperation_info.value = cooperation_info;
         form.pg_mode.value = "mmsv_down";
         form.submit();
     } else {
-        alert("´Ù¿î ¹ÞÀ¸½Ç ÆÄÀÏÀ» ¼±ÅÃÇÏ¼¼¿ä.\n¾÷·Îµå°¡ ¿Ï·á µÇÁö ¾ÊÀº ÆÄÀÏÀº ¼±ÅÃÇÏ¼Åµµ ´Ù¿î ¹ÞÀ¸½Ç ¼ö ¾ø½À´Ï´Ù.");
+        alert("ï¿½Ù¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.\nï¿½ï¿½ï¿½Îµå°¡ ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Åµï¿½ ï¿½Ù¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         return false;
     }
 }
 
 function mmsv_Trans_Make() {
 
-    // ÀüÃ¼ ¼±ÅÃ
+    // ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
     var arr_files_list = new Array();
     var arr_folders_list = new Array();
 
@@ -107,7 +107,7 @@ function mmsv_isChecked() {
     var chkBox = form.elements['mmsv_trans_file'];
     var chkLen = chkBox.length;
 
-    // ¼±ÅÃµÈ ÆÄÀÏÀÌ ÀÖ´ÂÁö Ã¼Å©
+    // ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ Ã¼Å©
     if (!chkLen) {
         if (chkBox.checked) return true;
         else return false;
@@ -126,9 +126,24 @@ function mmsv_bbs_download_init() {
     return downloadinfo;
 }
 
-function mmsv_bbs_download_item_dev(item, path, userid, fileno, hash, downchk, mureka_log, bbs_ho, cooperation_idx, price, uploader, chkadmin, title, code_cate2, content_id) {
-    downloadinfo.fileinfo.push(MakeDownloadInfoJsonObject(item, path, userid, fileno, hash, downchk, mureka_log, bbs_ho, cooperation_idx, price, uploader, chkadmin, title, code_cate2, content_id));
-    return downloadinfo;
+function mmsv_bbs_download_item_dev(item,
+                                    path,
+                                    userid,
+                                    fileno,
+                                    hash,
+                                    downchk,
+                                    mureka_log,
+                                    bbs_ho,
+                                    cooperation_idx,
+                                    price,
+                                    uploader,
+                                    chkadmin,
+                                    title,
+                                    code_cate2,
+                                    content_id)
+       {
+         downloadinfo.fileinfo.push(MakeDownloadInfoJsonObject(item, path, userid, fileno, hash, downchk, mureka_log, bbs_ho, cooperation_idx, price, uploader, chkadmin, title, code_cate2, content_id));
+         return downloadinfo;
 }
 
 function mmsv_bbs_download_end(userid, userpw, datas) {
@@ -149,7 +164,7 @@ function checkConnect() {
     return ;
 }
 
-// Æã¼Ç
+// ï¿½ï¿½ï¿½ï¿½
 function MakeDownloadInfoJsonObject(item, path, userid, fileno, hash, downchk, mureka_log, bbs_ho, cooperation_idx, price, uploader, chkadmin, title, code_cate2, content_id) {
     var obj = {};
     obj.item = item;

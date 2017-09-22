@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js ie ie8 lte8 lte9" lang="ko"><![endif]-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<!-- 내용등급표시 -->
+<meta http-equiv="PICS-label" content= '(PICS-1.1 "http://www.safenet.ne.kr/rating.html" l gen true for "http://filecast.co.kr" r (n 3 s 3 v 0 l 3 i 0 h 0))' />
+<meta http-equiv="PICS-label" content= '(PICS-1.1 "http://service.icec.or.kr/rating.html" l gen true for "http://filecast.co.kr" r (y 1))' />
+<!-- //내용등급표시 -->
+<meta name="google-site-verification" content="bqbJ0yPrecfy9L9Ydnj0RQ9ZZZIfyZPoPZoliS2VKY0" />
+<meta name="naver-site-verification" content="bbd482009df0996a0f046b5651f70b7330eab5c8"/>
+<meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="No-Cache"/>
+<meta name="robots" content="ALL" />
+<meta name="robots" content="INDEX, FOLLOW" />
+
+<meta name="title" content="파일캐스트" />
+<meta name="author" content="filecast"/>
+<meta name="keywords" content="파일캐스트, filecast.co.kr, 무료영화, 파일공유, TV다시보기, 무료다운, p2p사이트, 실시간감상, 웹하드,  모바일 스트리밍 서비스" />
+<meta name="description" content="파일캐스트, filecast.co.kr, 무료영화, 파일공유, TV다시보기, 무료다운, p2p사이트, 실시간감상, 웹하드" />
+<meta name="copyright" content="타이디웹:http://tidyweb.co.kr" />
+
+<meta name="apple-mobile-web-app-title" content="filecast" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="파일캐스트"/>
+<meta property="og:site_name" content="세상의 모든 파일 : 파일캐스트"/>
+<meta property="og:url" content="http://filecast.co.kr/index.php"/>
+<meta property="og:image" content="http://filecast.co.kr"/>
+<meta property="og:description" content="파일캐스트, filecast.co.kr, 무료영화, 파일공유, TV다시보기, 무료다운, p2p사이트, 실시간감상, 웹하드"/>
+<meta property="og:keywords" content="파일캐스트, filecast.co.kr, 무료영화, 파일공유, TV다시보기, 무료다운, p2p사이트, 실시간감상, 웹하드,  모바일 스트리밍 서비스"/>
+<meta name="twitter:title" content="파일캐스트" />
+<meta name="twitter:card" content="파일캐스트, filecast.co.kr, 무료영화, 파일공유, TV다시보기, 무료다운, p2p사이트, 실시간감상, 웹하드" />
+<meta name="twitter:url" content="http://filecast.co.kr/index.php" />
+<meta name="twitter:image" content="http://filecast.co.kr" />
+<meta name="twitter:description" content="파일캐스트, filecast.co.kr, 무료영화, 파일공유, TV다시보기, 무료다운, p2p사이트, 실시간감상, 웹하드" />
+<meta property="al:web:url" content="http://filecast.co.kr/index.php" />
+<meta property="al:android:url" content="https://play.google.com/store/apps/details?id=com.tidyweb.filecast" />
+<meta property="al:android:app_name" content="파일캐스트" />
+
+<link rel="canonical" href="http://filecast.co.kr/index.php" />
+<meta http-equiv="Last-Modified" content="Fri,15 Sep 2017 10:00:00" />
+
+<title>파일캐스트</title>
+
+	<link rel="stylesheet" href="http://static.filecast.co.kr/__release/css/web.lib.02.13.01.filecast.min.css" type="text/css" />
+	<link rel="stylesheet" href="http://static.filecast.co.kr/__release/css/web.09.13.01.filecast.min.css" type="text/css" />
+	<link rel="stylesheet" href="http://static.filecast.co.kr/__release/css/web.event.09.13.01.filecast.min.css" type="text/css" />
+	<link rel="stylesheet" href="http://static.filecast.co.kr/_lib/mediaelement/build/mediaelementplayer.min.css" />
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="http://static.filecast.co.kr/_lib/jquery/dist/jquery.min.js"></script>
+	<script src="http://static.filecast.co.kr/_lib/iscroll/iscroll.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://static.filecast.co.kr/_lib/naver/js/HuskyEZCreator.js" charset="utf-8"></script>
+	<!-- mediaelement js 는 view와 같은 서버에 있어야 작동함 -->
+
+	<script src="http://static.filecast.co.kr/__release/js/web.plugin.02.13.01.filecast.min.js"></script>
+	<script src="http://static.filecast.co.kr/__release/js/web.09.15.01.filecast.min.js"></script>
+	<script src="http://www.filecast.co.kr/static/_lib/mediaelement/build/mediaelement-and-player.min.js"></script>
+
+
+<script>
+
+$( document ).ready(function() {
+    //console.log( "ready!" );
+    var startPage = 'home';
+    var startData = '{"url":"","view":"","is_check":"0","popup":"fcModalEventKbsSale1706"}';
+    if(isDefined(startData) == true){
+        startData = JSON.parse(startData);
+    }else{
+        startData = null;
+    }
+
+    var app = new FC_APP();
+    app.start(startPage, startData, true);
+});
+
+</script>
+
+</head>
+<body class="main" itemscope itemtype="http://filecast.co.kr/index.php" style="position: relative;">
+
+
+<!-- loding img -->
+<div id="fc-loading"><div class="contents"><div class="viewImg"><img src="http://static.filecast.co.kr/_img/common/screen_loading.png" height="45" alt="" /></div><div class="txt">Loadding...</div></div></div>
+
+<div id="skipNavi">
+	<a href="#header">상단메뉴바로가기</a>
+	<a href="#container">본문바로가기</a>
+	<a href="#footer">하단메뉴바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- <div class="h_left"></div> -->
+		<div class="h_inner">
+			<h1 class="logo "><a href="/www/home/main/" alt="파일캐스트 홈" title="파일캐스트 홈">파일캐스트 홈</a></h1>
+			<div class="h_banner common is_non_vip_ele" style="display:block;">
+				<a onclick="GO_MENU('charge');" alt="충전하기" title="충전하기" style="text-indent: -9999px;">charge</a>
+			</div>
+			<div class="h_banner vip is_vip_ele" style="display:none;">
+				<a href="/www/event/view/50/" alt="VIP 라운지" title="충전하기" style="text-indent: -9999px;">vip</a>
+			</div>
+
+			<div class="menu_wrap">
+				<div class="gnb">
+					<h2 class="blind">주메뉴</h2>
+					<ul>
+						<li class="hand" onclick="GO_MENU('mypage');"><a>마이페이지</a></li>
+						<!--
+						<li class="hand"><a href="/www/charge/main/" alt="포인트 충전" title="포인트 충전">포인트 충전</a></li>
+						<li class="hand"><a href="/www/charge/flat/" alt="정액제 충전" title="정액제 충전">정액제 충전</a></li>
+						-->
+						<li class="hand" onclick="GO_MENU('charge');"><a alt="포인트 충전" title="포인트 충전">포인트 충전</a></li>
+						<li class="hand" onclick="GO_MENU('flat');"><a alt="정액제 충전" title="정액제 충전">정액제 충전</a></li>
+						<li><span>|</span></li>
+						<li class="hand"><a href="/www/event/" alt="이벤트" title="이벤트">이벤트</a></li>
+
+						<li class="hand"><a href="/www/theme/" alt="테마관" title="테마관">테마관</a></li>
+						<li class="hand"><a href="/www/cs/faq/" alt="고객센터" title="고객센터">고객센터</a></li>
+						<li class="last"><span>|</span></li>
+					</ul>
+				</div>
+				<dl class="top_menu">
+					<dt class="blind">탑메뉴</dt>
+					<dd>
+						<input type="hidden" id="alim_cnt" value="0">
+						<input type="hidden" id="qna_cnt" value="0">
+						<input type="hidden" id="note_cnt" value="0">
+						<a onclick="FC_APP_FN.noticeLayerControl('alim');" class="hand"><span class="ico type1">ico</span><span id="alim_cnt_html">
+												</span></a>
+						<div class="n_layer" id="notice_alim_layer">
+							<h3>알림</h3>
+							<div class="n_list" id="notice_alim_list"></div>
+							<span onclick="GO_MENU('alim');"><a class="n_more hand"><span>+</span> 알림 전체 보러가기</a></span>
+							<span onclick="jQuery('#notice_alim_layer').hide();"><a class="layer_close hand">닫기</a></span>
+							<div class="bg"></div>
+						</div>
+					</dd>
+
+					<dd class="hand">
+						<a onclick="FC_APP_FN.noticeLayerControl('qna');"><span class="ico type2">ico</span><span id="qna_cnt_html">
+												</span></a>
+						<div class="n_layer" id="notice_qna_layer">
+							<h3>1:1 문의</h3>
+							<div class="n_list" id="notice_qna_list"></div>
+							<span onclick="FC_APP_FN.noticeLayerMove('qna');"><a class="n_more hand"><span>+</span> 1:1 문의 전체 보러가기</a></span>
+							<span onclick="jQuery('#notice_qna_layer').hide();"><a class="layer_close hand">닫기</a></span>
+							<div class="bg"></div>
+						</div>
+					</dd>
+
+					<dd class="last">
+						<a class="hand" onclick="FC_APP_FN.noticeLayerControl('note');"><span class="ico type3">ico</span><span id="note_cnt_html">
+												</span></a>
+							<div class="n_layer active" id="notice_note_layer">
+							<h3>쪽지</h3>
+							<div class="n_list" id="notice_note_list"></div>
+							<span onclick="GO_MENU('note');"><a class="n_more hand"><span>+</span> 쪽지 전체 보러가기</a></span>
+							<span onclick="jQuery('#notice_note_layer').hide();"><a class="layer_close hand">닫기</a></span>
+							<div class="bg"></div>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<!-- <div class="h_right"></div> -->
+	</div>
+	<!-- //header -->
+	<hr />
+
+
+	<div class="btm_wrap sub" id="fc-btm-wrap-div">
+		<div class="bg_white"></div>
+		<!-- btm_inner -->
+		<div class="btm_inner sub">
+			<!-- side_bar -->
+			<div class="side_bar fc-left-side-bar">
+				<div class="main_menu">
+					<ul>
+						<li class="menu1 left-menu best" data-main="200" data-sub="0"><a href="/www/contents/#!/200/0/1/">인기</a></li>
+						<li class="menu2 left-menu movie" data-main="1" data-sub="0"><a href="/www/contents/#!/1/0/1/">영화</a></li>
+						<li class="menu3 left-menu broadcast" data-main="2" data-sub="0"><a href="/www/contents/#!/2/0/1/">방송</a></li>
+						<li class="menu4 left-menu ani" data-main="3" data-sub="0"><a href="/www/contents/#!/3/0/1/">애니</a></li>
+						<li class="menu5 left-menu book" data-main="4" data-sub="0"><a href="/www/contents/#!/4/0/1/">도서</a></li>
+						<li class="menu6 left-menu game" data-main="5" data-sub="0"><a href="/www/contents/#!/5/0/1/">게임</a></li>
+						<li class="menu7 left-menu utility" data-main="6" data-sub="0"><a href="/www/contents/#!/6/0/1/">유틸</a></li>
+						<li class="menu8 left-menu music" data-main="7" data-sub="0"><a href="/www/contents/#!/7/0/1/">음악</a></li>
+						<li class="menu9 left-menu education" data-main="8" data-sub="0"><a href="/www/contents/#!/8/0/1/">교육</a></li>
+						<li class="menu10 left-menu image" data-main="9" data-sub="0"><a href="/www/contents/#!/9/0/1/">이미지</a></li>
+
+									<li class="menu11 left-menu adult fc-adult-open" data-seo="0" data-main="11" data-sub="1101" data-adult="0" onclick="FC_APP_FN.onClickLeftAdultMenu(this);"><a>성인</a></li>
+												<li class="menu12 left-menu free" data-main="300" data-sub="1"><a href="/www/contents/#!/300/0/1/">무료</a></li>
+					</ul>
+				</div>
+				<div class="sub_menu">
+					<ul>
+						<li class="m1 hand"><a href="/www/home/main/" alt="홈으로" title="홈으로"><span>ico</span>홈으로</a></li>
+												<li class="m2 hand" onclick="GO_MENU('my_down');"><a><span>ico</span>받은 자료</a></li>
+						<li class="m3 hand" onclick="GO_MENU('my_like');"><a><span>ico</span>찜한 자료</a></li>
+
+						<li class="m4 event"><a href="/www/req/#!/list/all/1/" alt="자료요청" title="자료요청"><span>ico</span>자료 요청</a></li>
+
+						<li class="m4 hand" style="display: none;"><a href="/www/movies/" alt="자료요청" title="최신 업데이트 영화"><span>ico</span>최신 업데이트 영화</a></li>
+					</ul>
+				</div>
+				<div class="center">
+					<h2><span class="hand" onclick="GO_MENU('faq');">고객센터 안내</span></h2>
+					<p class="num"><span class="ico"></span>1600-0335</p>
+					<dl>
+						<dt>평일</dt>
+						<dd>10:00~18:00</dd>
+						<dt>점심</dt>
+						<dd>13:00~14:00</dd>
+					</dl>
+					<p class="txt">1:1게시판 연중무휴</p>
+					<span class="go_1to1" onclick="GO_MENU('qna');">1:1문의하기</span>
+					<span class="btn_control" onclick="FC_APP_FN.onClickControlRequest();">원격지원신청</span>
+				</div>
+				<div class="active_down">
+					<h2>내려받기 프로그램<span>수동설치</span></h2>
+					<a href="http://app.filecast.co.kr/app/FileCast_downloader.exe" class="btn_down">download</a>
+				</div>
+				<div class="child_protect hand" onclick="WEB_HOME.openYouthProtectionCenter();">
+					<a>청소년 보호센터 클린사이트</a>
+				</div>
+			</div>
+			<!-- //side_bar -->
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div id= "fcContainerContent" class="content sub">                <!-- top_content -->
+				<div class="top_content">
+					<div class="top_inner">
+
+
+                        <div class="searchAll">
+							<form method="post" id="fcSearchForm" name="fcSearchForm">
+							<input type="hidden" name="category" id="fc-search-form-category" value="main" />
+								<input type="hidden" name="location" id="fc-search-form-location" value="main" />
+                                <fieldset>
+									<legend class="blind">검색</legend>
+									<input type="text" class="search" id="search" name="search" value="" placeholder=""/>
+									<label for="search" class="blind">검색</label>
+									<input type="submit" class="btn_search"/>
+								</fieldset>
+							</form>
+						</div>
+
+
+						<input type="hidden" id="fcDirectViewLayer" value="0">
+						<input type="hidden" id="memberLoginOk" value="0">
+                        <input type="hidden" id="memberValidUploader" value="0">
+                        <input type="hidden" id="memberValidAauthentic" value="0">
+                        <input type="hidden" id="memberValidAdult" value="0">
+                        <input type="hidden" id="memberValidChild" value="0">
+                        <input type="hidden" id="memberValidLevel" value="1">
+                        <input type="hidden" id="memberValidEmail" value="">
+                        <input type="hidden" id="fc-recieve-memo-nickname" value="">
+						<input type="hidden" id="memberSimpleAuth" value="0">
+						<input type="hidden" id="isPhonegap" value="0">
+						<input type="hidden" id="isIphoneApp" value="0">
+						<input type="hidden" id="isAndroidApp" value="0">
+						<input type="hidden" id="isFcMember" value="0">
+						<input type="hidden" id="memberThatGrade" value="0">
+
+                        <div class="loginBox show" id="fcMemberLoginNonOk">
+							<p>회원가입은 10초면 충분합니다. 그리고 그만한 가치가 있습니다.</p>
+							<!-- <a href="#" class="btn_login" data-toggle="modal" data-target="#fcLoginModal" data-whatever="search">파일 캐스트 로그인</a> -->
+                            <a class="btn_login hand" onclick="GO_MENU('login', 'search');">파일 캐스트 로그인</a>
+
+							<a class="btn_join hand" onclick="GO_MENU('join');">10초 만에 가입하기</a>
+
+						</div>
+
+						<div class="loginBox on " id="fcMemberLoginOk">
+							<p><span class="vip_ico is_vip_ele" style="display:none;"></span><span class="user_name" id="fcMemberEmail"></span> 님 환영합니다.</p> <span class="hand" onclick="GO_MENU('logout');"><a class="btn_logout">로그아웃</a></span>
+							<ul>
+								<li class="hand" onclick="GO_MENU('charge');">
+									<dl>
+										<dt>포인트</dt>
+										<dd><span class="cash" id="fcMemberCashBase">0</span>P</dd>
+									</dl>
+								</li>
+								<li class="hand" onclick="GO_MENU('charge');">
+									<dl>
+										<dt>보너스 포인트</dt>
+										<dd><span class="point" id="fcMemberCashBonus">0</span>B</dd>
+									</dl>
+								</li>
+								<li class="hand" onclick="GO_MENU('flat');">
+									<dl>
+										<dt>정액제</dt>
+										<dd><span id="fcMemberRmainSubscription">0</span>일</dd>
+									</dl>
+								</li>
+								<li class="hand">
+									<a href="http://filecast.co.kr/www/mypage/#!/coupon_log">
+									<dl>
+										<dt>쿠폰</dt>
+										<dd><span id="fcMemberDownCoupon">0</span>장</dd>
+									</dl>
+									</a>
+								</li>
+								<li class="hand" onclick="GO_MENU('mileage');">
+									<dl>
+										<dt>마일리지</dt>
+										<dd><span class="mileage" id="fcMemberApples">0</span>원</dd>
+									</dl>
+								</li>
+									<li class="last">
+										<dl>
+											<dt>자녀안심보호</dt>
+											<dd><span id="fcMemberChildMark" class="child_img  hand" onclick="WEB_MYPAGE.childFormOpen();"></span></dd>
+										</dl>
+									</li>
+							</ul>
+						</div>
+
+
+
+					</div>
+				</div>
+				<!-- //top_content -->
+
+<!-- Button trigger modal -->
+<!--
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+-->
+
+
+
+
+					<!-- //top_content -->
+
+					<!-- m_content -->
+                    <div style="display:none">
+                        <h2 style="text-indent: -9999px;">파일캐스트 메인</h2>
+                    </div>
+                    <!-- //m_content -->
+
+					<div class="btm_content">
+						<!-- l_content_wrap -->
+						<div class="l_content_wrap">
+							<!-- now_best -->
+							<div class="now_best">
+								<h2>지금 캐스트에서 <span class="txt_red">인기</span>가 가장 많아요!</h2>
+								<div class="list_style">
+									<ol>
+										<li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7796492);">	<div class="one">		<span class="m_num type1"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/45/88/4588b24b41a1b2e80c529a55cefd199d.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="실화 국가가 외면한 6명의 영웅 ]]]] 1.3 시간 ]]]]" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">실화 국가가 외면한 6명의 영웅 ]]]] 1.3 시간 ]]]]</span>		<span class="category"> 영화 > 액션</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7796610);">	<div class="one">		<span class="m_num type2"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/71/10/71108bf5068048cadf7fab1e9831b3f9.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="스ㅌㅣ븐 스필버그 vs 맷 ㄷㅔoㅣ먼 [- 죽 음 을 보 는 남 ㅈㅏ -] 한글자막 " width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">스ㅌㅣ븐 스필버그 vs 맷 ㄷㅔoㅣ먼 [- 죽 음 을 보 는 남 ㅈㅏ -] 한글자막 </span>		<span class="category"> 영화 > SF/ 판타지</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7792489);">	<div class="one">		<span class="m_num type3"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/ae/46/ae461d6ec976718d37f7f9646f19a6de.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="2017 [불루레이 - 소장용] SF변신로봇 [초ㅣ후으i ㄱㅣㅅㅏ] 1080p초고화질 정식한글" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">2017 [불루레이 - 소장용] SF변신로봇 [초ㅣ후으i ㄱㅣㅅㅏ] 1080p초고화질 정식한글</span>		<span class="category"> 영화 > 액션</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7792690);">	<div class="one">		<span class="m_num type4"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/7a/55/7a551cbff446862b878cc9a414e8cf16.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="[소설] 소설 완결 모음 1 약 630권 (txt 텍본)" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">[소설] 소설 완결 모음 1 약 630권 (txt 텍본)</span>		<span class="category"> 도서/만화 > 무협/액션</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7791735);">	<div class="one">		<span class="m_num type5"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/c5/14/c51488fbb2358bf8f4b0d009bdb74253.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="2017 [극장판] 떴다ii 완벽자막 [ 소드 Oㅏ트 온ㄹr인 - 오ㄷㅣ널 스ㅋㅔ일 ] 고화질" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">2017 [극장판] 떴다ii 완벽자막 [ 소드 Oㅏ트 온ㄹr인 - 오ㄷㅣ널 스ㅋㅔ일 ] 고화질</span>		<span class="category"> 영화 > 액션</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7792439);">	<div class="one">		<span class="m_num type6"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/c6/2a/c62adc266401622e5664a800cfe058c6.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="[ 2017 -09 -16 ] - 유덕화 [ 폭탄해제 전문가 ] 완벽자막" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">[ 2017 -09 -16 ] - 유덕화 [ 폭탄해제 전문가 ] 완벽자막</span>		<span class="category"> 영화 > 액션</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7793469);">	<div class="one">		<span class="m_num type7"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/ab/d2/abd2c5ac973061139a1a70846bdb6344.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="명불허전.E11.170916.1080p-NEXT" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">명불허전.E11.170916.1080p-NEXT</span>		<span class="category"> 방송 > 드라마</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(7790710);">	<div class="one">		<span class="m_num type8"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/63/a6/63a69b04dd5dbbfcdd4d4f9a4026cb9e.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="[애나벨 인형의 주인] (자체자막1080P) 초고화질 스샷참조" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">[애나벨 인형의 주인] (자체자막1080P) 초고화질 스샷참조</span>		<span class="category"> 영화 > 공포/스릴러</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(5316768);">	<div class="one">		<span class="m_num type9"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/8f/c0/8fc07c48f965c4de972bee54f75b5cea.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="[원피스] 721~728화 (cut 1280x720 x264)" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">[원피스] 721~728화 (cut 1280x720 x264)</span>		<span class="category"> 애니 > 액션</span>	</div></li><li class="<?php echo $contetns->bg_trclass ?>" onclick="FC_APP_FN.openContentsView(2063588);">	<div class="one">		<span class="m_num type10"></span>		<span class="m_sum_img ">			<img src="http://pic.filecast.co.kr/f9/6e/f96e88fce69645a2e693b884fb64c0f6.gif" onerror="utility.ui.onErrorImgLoad(this);"alt="유자식상팔자.E72.141021.HDTV.H264.720p-WITH" width="45px" height="45px"/> <span></span>		</span>	</div>	<div class="two">		<span class="tit">유자식상팔자.E72.141021.HDTV.H264.720p-WITH</span>		<span class="category"> 방송 > 쇼/예능</span>	</div></li>									</ol>
+								</div>
+								<p class="now_time">2017.09.18 17:56 <span>현재</span></p>
+							</div>
+							<!-- //now_best -->
+
+
+
+							<!-- recommend_today -->
+							<div class="recommend_today">
+								<h2>파일캐스트 추천! 오늘 같은 날 보기 좋은 콘텐츠</h2>
+																<div class="today_btn_area" id="today_btn_area">
+									<span class="btn_prev" id="today-btn-prev" onclick="myGoodContentsSwipe.prev();"></span>
+									<span class="btn_next" id="today-btn-next" onclick="myGoodContentsSwipe.next();"></span>
+								</div>
+																<div class="today_wrap" id="pc-main-good-contents-swipe">
+                                    <div class="swipe-wrap" id="pc-main-good-contents-iscroll" style="height: 426px;">
+										<div class="inner swip-list" style="height: 426px;">	<ul class="areaareaarea" style="width: 405px; height:412px;visibility: visible;"><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('toptoon','1827/45351');" data-order="0">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/64/db/64db4e6cbaab4da06d13a24bd47b2328.jpg" src=" http://pic.filecast.co.kr/64/db/64db4e6cbaab4da06d13a24bd47b2328.jpg" alt="기억 속 아름다운 첫사랑, 그리고 그 첫사랑을 빼닮은 세 자매. 그를 혼란에 빠지게 만든건" />		<div class="txtArea">			<p class="tit">세자매</p>			<p class="txt">기억 속 아름다운 첫사랑, 그리고 그 첫사랑을 빼닮은 세 자매. 그를 혼란에 빠지게 만든건</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','밥상 차리는 남자')" data-order="1">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/7a/0e/7a0ed5ee02739dd1c999851519965704.jpg" src=" http://pic.filecast.co.kr/7a/0e/7a0ed5ee02739dd1c999851519965704.jpg" alt="심형탁, 이일화의 비밀을 알게 되다..?!" />		<div class="txtArea">			<p class="tit">밥상 차리는 남자</p>			<p class="txt">심형탁, 이일화의 비밀을 알게 되다..?!</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','명불허전')" data-order="2">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/83/c3/83c3a1277a0b4ddc9c331158d8f4d146.jpg" src=" http://pic.filecast.co.kr/83/c3/83c3a1277a0b4ddc9c331158d8f4d146.jpg" alt="김아중 과다보호자(?) 김남길 #창피한데귀여워" />		<div class="txtArea">			<p class="tit">명불허전</p>			<p class="txt">김아중 과다보호자(?) 김남길 #창피한데귀여워</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','런닝맨')" data-order="3">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/01/09/01090596018c6e54b31a502291d079a6.jpg" src=" http://pic.filecast.co.kr/01/09/01090596018c6e54b31a502291d079a6.jpg" alt="전소민, 백지영 경악하게 만든 ‘파워 랩 뚫기’" />		<div class="txtArea">			<p class="tit">런닝맨</p>			<p class="txt">전소민, 백지영 경악하게 만든 ‘파워 랩 뚫기’</p>		</div>	</div></li>	</ul></div><div class="inner swip-list" style="height: 426px;">	<ul class="areaareaarea" style="width: 405px; height:412px;visibility: visible;"><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','판타스틱 듀오 2')" data-order="0">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/a6/3d/a63d74911a4a75ade5652b194895a179.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="김조한, 맑은 음색의 주꾸미 걸과 듀엣 ‘버리고 버려도’" />		<div class="txtArea">			<p class="tit">판타스틱 듀오 2</p>			<p class="txt">김조한, 맑은 음색의 주꾸미 걸과 듀엣 ‘버리고 버려도’</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','슈퍼맨이 돌아왔다')" data-order="1">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/4a/8c/4a8c6a489d22f30f97e748e39205fa52.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="´딸바보 아빠´ 기태영, 로희와 버진 로드 입장에 묘한 감정~" />		<div class="txtArea">			<p class="tit">슈퍼맨이 돌아왔다</p>			<p class="txt">´딸바보 아빠´ 기태영, 로희와 버진 로드 입장에 묘한 감정~</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','내 사랑 2017')" data-order="2">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/b7/16/b7168825ca7be477f4bd44d8c83fce4d.png" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="“당신의 마지막 인생 로맨스는 언제였나요?" />		<div class="txtArea">			<p class="tit">내 사랑</p>			<p class="txt">“당신의 마지막 인생 로맨스는 언제였나요?</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','황금빛 내 인생')" data-order="3">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/b9/b6/b9b664cd7a7aedbd851baf153a88625a.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="신혜선, 재벌가 입성...! 박시후 ˝우리집 왜 왔어˝ 충격재회" />		<div class="txtArea">			<p class="tit">황금빛 내 인생</p>			<p class="txt">신혜선, 재벌가 입성...! 박시후 ˝우리집 왜 왔어˝ 충격재회</p>		</div>	</div></li>	</ul></div><div class="inner swip-list" style="height: 426px;">	<ul class="areaareaarea" style="width: 405px; height:412px;visibility: visible;"><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','아는 형님')" data-order="0">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/a3/a2/a3a267feaaf50470cf6fbee2593991b0.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="진영아.. 형이 좀 무섭다(ㄷㄷ) 고무줄에 비굴해지는 호동왕자" />		<div class="txtArea">			<p class="tit">아는 형님</p>			<p class="txt">진영아.. 형이 좀 무섭다(ㄷㄷ) 고무줄에 비굴해지는 호동왕자</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','로마의 휴일')" data-order="1">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/f6/db/f6dbdbce0891000791728ea5128b09a2.png" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="일확천금 만수르의 꿈, '로마의 휴일'에서 이루어질까?" />		<div class="txtArea">			<p class="tit">로마의 휴일</p>			<p class="txt">일확천금 만수르의 꿈, '로마의 휴일'에서 이루어질까?</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','효리네 민박')" data-order="2">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/a4/62/a4623397e88950bd1d0c451ba1f1c285.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="아이유, 내가 바로 곽지해변의 모아나★ (꿈은 이루어진다)" />		<div class="txtArea">			<p class="tit">효리네 민박</p>			<p class="txt">아이유, 내가 바로 곽지해변의 모아나★ (꿈은 이루어진다)</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','구해줘')" data-order="3">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/ac/3b/ac3b152a0214d0d18f5dcc03aeb05f7b.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="지하 기도실로 납치된 이다윗! #정훈아_도망쳐" />		<div class="txtArea">			<p class="tit">구해줘</p>			<p class="txt">지하 기도실로 납치된 이다윗! #정훈아_도망쳐</p>		</div>	</div></li>	</ul></div><div class="inner swip-list" style="height: 426px;">	<ul class="areaareaarea" style="width: 405px; height:412px;visibility: visible;"><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','구해줘')" data-order="0">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/c9/ac/c9acbf843cea09e16c7f446a4b961f1b.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="[눈물주의] 마음 아파하는 윤유선을 위로하는 서예지" />		<div class="txtArea">			<p class="tit">구해줘</p>			<p class="txt">[눈물주의] 마음 아파하는 윤유선을 위로하는 서예지</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','1박 2일')" data-order="1">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/3f/30/3f307d3d4403053b35671c25d1a126af.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="우리 준영이 곤드레 작업하면서 철들 줄..." />		<div class="txtArea">			<p class="tit">1박 2일</p>			<p class="txt">우리 준영이 곤드레 작업하면서 철들 줄...</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_r" onclick="GO_MENU('search','군함도')" data-order="2">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/ec/d0/ecd0d189a1373930b4ca57c1a4d591f0.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="지옥섬 군함도, 조선인들의 목숨을 건 탈출이 시작된다!" />		<div class="txtArea">			<p class="tit">군함도</p>			<p class="txt">지옥섬 군함도, 조선인들의 목숨을 건 탈출이 시작된다!</p>		</div>	</div></li><li style="width: 196px;height: 206px;" class="r_type2 hand fc-pc-good-contents-list-li m_l" onclick="GO_MENU('search','밤도깨비')" data-order="3">	<div>		<img class="good-contents-list-img-lazy" data-original=" http://pic.filecast.co.kr/68/64/686452344fe3bfafaf6b5b73269da9c9.jpg" src="http://static.filecast.co.kr/_img/common/loading_mini.gif" alt="세상에서 제일 수상한 그녀 '힙합 도인' 이수근" />		<div class="txtArea">			<p class="tit">밤도깨비</p>			<p class="txt">세상에서 제일 수상한 그녀 '힙합 도인' 이수근</p>		</div>	</div></li>	</ul></div>
+                                    </div>
+								</div>
+
+
+								<div class="m_etc type1" onclick="GO_EVENT(262);"  >
+									<h3>KBS 인기 예능 BIG4 <br> 최대 90% 할인 프로모션 <br> 모든 콘텐츠 단돈 150원!!!</h3>
+									<p>[프로모션 콘텐츠] <br> 슈퍼맨이 돌아왔다, 1박 2일 <br> 개그콘서트, 해피투게더 <br>모든 회차  150원</p>
+									<span><b>인기 예능 BIG4 확인하기</b> &gt;&gt;</span>
+								</div>
+								<div class="m_etc type2 is_non_vip_ele"  onclick="GO_MENU('charge');" style="display:block">
+									<h3>지금 충전하시면<br> 50%결제할인+100,000P</h3>
+									<p id="m_etc_subtitle">500만 회원 돌파기념 <br> 50%결제 할인+100,000B 지급! <br> 마일리지까지 추가적립!</p>
+									<span><b>파일캐스트 충전소</b> &gt;</span>
+								</div>
+								<div class="m_etc type2 is_vip_ele"  onclick="GO_MENU('charge');" style="display:none">
+									<h3>지금 충전하시면<br> 50%결제할인+100,000P</h3>
+									<p id="m_etc_subtitle_vip">500만 회원 돌파기념 <br> 50%결제 할인+ 제휴포인트x2배 <br>  마일리지+100,000B 추가적립!</p>
+									<span><b>파일캐스트 충전소</b> &gt;</span>
+								</div>
+
+
+							</div>
+							<!-- //recommend_today -->
+							<!-- l_btm_con -->
+							<div class="l_btm_con">
+
+								<div class="m_banner m1705>" data-vip="m1702_v" data-non_vip="m1702" id="pc-main-rolling-banner">
+									<ul>
+										<!-- 첫번째는 결제 배너만 -->
+										<li onclick="GO_MENU('charge');" class="banner1" style="text-indent: -9999px;background: url(' http://pic.filecast.co.kr/87/5d/875d46857b3b3a049527e225f8ac890b.png') no-repeat;background-position: 0 0;    height: 117px;" id="pc-main-banner-img-charge" > 결제 배너 - non vip</li><li onclick="GO_EVENT('264');" class="banner2" style="text-indent: -9999px;background: url(' http://pic.filecast.co.kr/87/5d/875d46857b3b3a049527e225f8ac890b.png') no-repeat;background-position:0 -234px;height:117px;" id="pc-main-banner-img-1" >ios 다운로드 이벤트 </li><li onclick="GO_EVENT('262');" class="banner3" style="text-indent: -9999px;background: url(' http://pic.filecast.co.kr/87/5d/875d46857b3b3a049527e225f8ac890b.png') no-repeat;background-position: 0 -117px;    height: 117px;" id="pc-main-banner-img-2" >kbs 인기 예능 할인</li><li onclick="GO_EVENT('269');" class="banner4" style="text-indent: -9999px;background: url(' http://pic.filecast.co.kr/87/5d/875d46857b3b3a049527e225f8ac890b.png') no-repeat;height:117px;background-position:0 -351px;" id="pc-main-banner-img-3" >가을맞이</li>
+									</ul>
+									<input type="hidden" id="main-banner-url-vip" value=" http://pic.filecast.co.kr/87/5d/875d46857b3b3a049527e225f8ac890b.png"/>
+									<input type="hidden" id="main-banner-url-non-vip" value=" http://pic.filecast.co.kr/87/5d/875d46857b3b3a049527e225f8ac890b.png"/>
+
+								</div>
+
+
+
+								<div class="etc_con">
+									<div class="one">
+										<h3>회사 소개</h3>
+										<ul>
+											<li><span><a href="http://filecast.co.kr/www/company/introduction">About filecast</a></span></li>
+											<li><span><a href="http://filecast.co.kr/www/company/provision">이용약관</a></span></li>
+											<li><span><a href="http://filecast.co.kr/www/company/privacy"><b>개인정보 취급방침</b></a></span></li>
+											<li><span><a href="http://filecast.co.kr/www/company/policy"><b>청소년 보호정책</b></a></span></li>
+											<li><span><a href="/www/company/promise/">안심이 된다 '파일캐스트'</a></span></li>
+										</ul>
+									</div>
+									<div class="two">
+										<h3><span onclick="GO_MENU('event');">진행 중인 프로모션</span></h3>
+										<ul>
+											<li><span onclick="GO_EVENT(269,0);">가을맞이 인기영화 52편 반값할인</span></li><li><span onclick="GO_EVENT(264,0);">iOS 다운로드 전용앱 출시</span></li><li><span onclick="GO_EVENT(262,0);">KBS 인기예능 HOT 90% 할인</span></li><li><span onclick="GO_EVENT(51,0);">파일캐스트야! 찾!아!줘!</span></li>										</ul>
+									</div>
+									<div class="three">
+										<h3><span class="hand" onclick="GO_MENU('notice');">공지사항</span></h3>
+										<ul>
+																						<li><span class="hand" onclick="GO_MENU('notice_view', 1414);">[공지] 불법 성인콘텐츠 등록 판매자 49차 제재 명단</span></li>
+																						<li><span class="hand" onclick="GO_MENU('notice_view', 1408);">[공지] 불법 성인콘텐츠 등록 판매자 48차 제재 명단</span></li>
+																						<li><span class="hand" onclick="GO_MENU('notice_view', 1404);">[공지] 불법 성인콘텐츠 등록 판매자 47차 제재 명단</span></li>
+																						<li><span class="hand" onclick="GO_MENU('notice_view', 1401);">[안내] 파일캐스트 '매거진 전용 도서관' OPEN 안내</span></li>
+																						<li><span class="hand" onclick="GO_MENU('notice_view', 1390);">[공지] 불법 성인콘텐츠 등록 판매자 46차 제재 명단</span></li>
+																					</ul>
+									</div>
+									<div class="four">
+										<h3><span  onClick="WEB_HOME.openCopyrightCenter();">저작권 보호 센터</span></h3>
+										<ul>
+																						<li><span onclick="GO_MENU('copyright');">청년경찰</span></li>
+																						<li><span onclick="GO_MENU('copyright');">장산범</span></li>
+																						<li><span onclick="GO_MENU('copyright');">시사스페셜_609화</span></li>
+																						<li><span onclick="GO_MENU('copyright');">시사스페셜_608화</span></li>
+																						<li><span onclick="GO_MENU('copyright');">스포츠 야_132화</span></li>
+																					</ul>
+									</div>
+								</div>
+							</div>
+							<!-- l_btm_con -->
+							<span class="hand top_area" onclick="utility.ui.bodyTop();" ><a class="btn_top type3">top버튼</a></span>
+						</div>
+						<!-- //l_content_wrap -->
+					<!-- r_content -->
+					<div class="r_content">
+
+
+
+
+						<div class="r_coupon">
+							<a href="/www/coupon/" alt="쿠폰등록" title="쿠폰등록">
+								<h3>무료 다운로드 쿠폰 등록</h3>
+								<div>
+									<p>파일캐스트 무료 다운로드 쿠폰 등록하세요~</p>
+									<div>
+										<input type="text" onclick="location.href='/www/coupon/';"/>
+										<span>등록하기</span>
+									</div>
+								</div>
+							</a>
+						</div>
+							<div class="recommend type1">
+								<a href="/www/movies/"><h3>금주의 핫 이슈! <span class="btn_more">+ 더 보기</span></h3></a>
+								<div class="t_banner" data-active="0" data-count="5" id="home-hot-issue-list-div">
+<span class="home-hot-issue-list-span hand b0" style="display:block" onclick="GO_SEARCH('로마의 휴일', 1);">	<img src=" http://pic.filecast.co.kr/5a/2b/5a2b2a87bfed8ef6cbcd670c6ea18e6f.jpg" style="width:263px;height:110px;" alt="배너배경" />	<p>짠내폭발 코믹 인질극</p>	<p class="tit">로마의 휴일</p>	<span>보러가기</span></span><span class="home-hot-issue-list-span hand b1" style="display:none" onclick="GO_SEARCH('군함도', 0);">	<img src=" http://pic.filecast.co.kr/6b/b4/6bb4e444a21cdecd37ee671029d61ac8.jpg" style="width:263px;height:110px;" alt="배너배경" />	<p>1945,우리는 살고 싶었다.</p>	<p class="tit">군함도</p>	<span>보러가기</span></span><span class="home-hot-issue-list-span hand b2" style="display:none" onclick="GO_SEARCH('박열', 0);">	<img src=" http://pic.filecast.co.kr/e8/8d/e88dd7e88de403b8cc989005d0df82c6.jpg" style="width:263px;height:110px;" alt="배너배경" />	<p>나는 조선의 개새끼로소이다.</p>	<p class="tit">박열</p>	<span>보러가기</span></span><span class="home-hot-issue-list-span hand b3" style="display:none" onclick="GO_SEARCH('리얼', 1);">	<img src="http://pic.filecast.co.kr/19/e3/19e33d742c80fbcc7c83b17a8ee0cf98.jpg" style="width:263px;height:110px;" alt="배너배경" />	<p>2017 액션느와르</p>	<p class="tit">리얼</p>	<span>보러가기</span></span><span class="home-hot-issue-list-span hand b4" style="display:none" onclick="GO_SEARCH('하루', 1);">	<img src=" http://pic.filecast.co.kr/25/4c/254c3a4e6372202835826d88a089bfa0.jpg" style="width:263px;height:110px;" alt="배너배경" />	<p>끝나지 않는 지옥에 갇혔다</p>	<p class="tit">하루</p>	<span>보러가기</span></span>
+								</div>
+								<div class="btn_b" id="home-hot-issue-list-point">
+<p class="hot-issue-list-point active" data-order="0"><span class="txt">로마의 휴일</span><span class="bg"></span></p><p class="hot-issue-list-point " data-order="1"><span class="txt">군함도</span><span class="bg"></span></p><p class="hot-issue-list-point " data-order="2"><span class="txt">박열</span><span class="bg"></span></p><p class="hot-issue-list-point " data-order="3"><span class="txt">리얼</span><span class="bg"></span></p><p class="hot-issue-list-point " data-order="4"><span class="txt">하루</span><span class="bg"></span></p>								</div>
+							</div>
+
+							<div class="filecast_relax">
+								<a href="/www/company/promise/" class="link_area" alt="안심이된다 파일캐스트" title="안심이된다 파일캐스트"></a>
+							</div>
+
+							<div class="sub_link">
+								<ul>
+									<li>
+										<a href="/www/event/view/5/" alt="모든 브라우저 지원" title="모든 브라우저 지원">
+											<div class="b_image type1"></div>
+											<dl>
+												<dt>모든 브라우저 지원</dt>
+												<dd>크롬, 사파리 등 모든 브라우저 <br /> 다운로드 지원!</dd>
+											</dl>
+										</a>
+									</li>
+
+									<li class="bg">
+										<a href="/www/event/view/1/" alt="출석체크 이벤트" title="출석체크 이벤트">
+											<div class="b_image type2"></div>
+											<dl>
+												<dt>출석체크 이벤트</dt>
+												<dd>매일매일 출석체크만 해도<br /> 매일 20B , 최대 500B!</dd>
+											</dl>
+										</a>
+									</li>
+
+									<li>
+										<a href="/www/event/free/" alt="무료포인트 받기" title="무료포인트 받기">
+											<div class="b_image type15"></div>
+											<dl>
+												<dt>무료포인트 받기</dt>
+												<dd>페이스북 좋아요, 마일리지조회 등<br /> 이벤트 참여후 무료포인트 받기!</dd>
+											</dl>
+										</a>
+									</li>
+
+									<li class="bg">
+										<a href="/www/event/view/26/" alt="카톡 실시간 상담" title="카톡 실시간 상담">
+											<div class="b_image type11"></div>
+											<dl>
+												<dt>카톡 실시간 상담!</dt>
+												<dd>실시간 카카오톡 상담으로<br /> 쉽고 빠르게 궁금증 해결!</dd>
+											</dl>
+										</a>
+									</li>
+
+
+									<li>
+										<a href="/www/theme/" alt="테마관" title="테마관">
+											<div class="b_image type5"></div>
+											<dl>
+												<dt>오늘 뭘 보지?</dt>
+												<dd>파일캐스트 테마관에서 매일매일<br /> 재미있는 영화를 추천해드립니다.</dd>
+											</dl>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+
+							<div class="best_y">
+								<h3>어제 인기가 많았던 자료에요</h3>
+								<ol class="list_style">
+									<li class="hand" onclick="FC_APP_FN.openContentsView(7791935);"><span class="txt_color">1</span><a>2017 떠따 [ 인 질 강 도 ]</a></li><li class="hand" onclick="FC_APP_FN.openContentsView(7793175);"><span class="txt_color">2</span><a>2017 [ 임..창..정 ] 욱겨뒤져 - 상.상.불.허 기묘한 인질극 </a></li><li class="hand" onclick="FC_APP_FN.openContentsView(7792793);"><span class="txt_color">3</span><a>2017 떠따 [ 타 도 명 박 ] 고화질</a></li><li class="hand" onclick="FC_APP_FN.openContentsView(7791115);"><span class="">4</span><a>2017 [불루레이-한글] 47ㅁㅣㅌㅓ - 올 여름 가장 스릴무비ii [간담서늘]</a></li><li class="hand" onclick="FC_APP_FN.openContentsView(7789770);"><span class="">5</span><a>2017[자체자막]초고화질.인형의 주인.애나벨2</a></li>								</ol>
+								<p class="time">2017.09.17 17:56 기준</p>
+							</div>
+							<div class="kids_protect">
+								<div class="inner">
+									<span class="txt">아동청소년 이용 음란물을 제작/배포/소지시 아동청소년의 성 보호에 관한 법률 11조에 따라 형사처벌을 받을 수 있습니다.</span>
+								</div>
+							</div>
+
+
+
+
+					</div>
+					<!-- //r_content -->
+				</div>
+				<!-- //btm_content -->
+			</div>
+			<!-- //content -->
+			<div class="content_side">
+                <div class="banner_area">
+					<p>GDN BANNER <br />120 X 600</p>
+				</div>
+            </div>
+		</div>
+		<!-- //container -->
+		</div>
+		<!-- btm_inner -->
+	</div>
+	<!-- btm_wrap -->
+	<!-- foot_wrap -->
+	<div class="foot_wrap">
+		<!-- footer -->
+		<div id="footer">
+			<div class="bg_gray"></div>
+			<div class="foot_inner">
+				<address>
+					<ul>
+						<li>(주)타이디웹<span class="bar">|</span></li>
+						<li>대표자 : 이승환<span class="bar">|</span></li>
+						<li>경기도 성남시 분당구 판교역로 <span>178</span> 서건타워 <span>1102, 1103</span>호 <span class="bar">|</span></li>
+						<li>대표전화 : <span>1600-0335</span><span class="bar">|</span></li>
+						<li>팩스 : <span>031-705-4747</span></li>
+					</ul>
+					<ul>
+						<li>사업자등록번호:<span>144-81-12649</span><span class="bar">|</span></li>
+						<li>통신판매업신고번호 : 제 <span>2013</span>-경기성남-<span>0604</span>호<span class="bar">|</span></li>
+						<li>특수한 유형의 부가통신사업자 등록번호 : 제 <span>3-01-15-0006</span>호</li>
+					</ul>
+					<ul>
+						<li>저작권, 청소년, 정보보호책임 : 조민식 팀장 (<a href="mailto:help.filecast@gmail.com">help.filecast@gmail.com</a>)<span class="bar">|</span></li>
+						<li class="copy">Copyright &copy; Tidyweb All right reserved</li>
+					</ul>
+				</address>
+				<a class="tidyweb">tidyweb</a>
+				<a class="foot_logo">filecast</a>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+	<!-- //foot_wrap -->
+</div>
+
+<div style="width: 0;height: 1px;"><a href="" id="fc-install-download-link" download></a></div>
+<!-- //wrap -->
+
+<!--
+<div class="overlay modal-closed" id="modalOverlay"></div>
+<div id="viewModal" style="">
+    <div class="dim" id="modalContentsView"></div>
+</div>
+-->
+ <!-- <div class="dim" id="modalContentsView"></div> -->
+<!-- common view modal div -->
+<div class="modal" id="contentsViewModalTemplate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="true">
+	  <div class="modal-dialog view-contents" role="document" id="loadViewContentsTemplate" style=""></div>
+</div>
+
+<div class="modal" id="contentsViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="true">
+	  <div class="modal-dialog view-contents" role="document" id="loadViewContents" style=""></div>
+</div>
+<!-- // common view modal div -->
+
+<!-- common first modal div -->
+<div id="fc-web-modal-first-div">
+</div>
+
+<!-- common second modal div -->
+<div id="fc-web-modal-second-div">
+</div>
+
+<!-- common alert modal div -->
+<div class="modal" id="fcMobileAlertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-fun="">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="fc-modal-alert-title">파일 캐스트 알림</h4>
+      </div>
+      <div class="modal-body">
+        <p class="alert-msg" id="fc-modal-alert-msg"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="width:0px; heigth:0;" id="FcWebControllerAx" ></div>
+ <iframe width="0" height="0" frameborder="0" name="hiddenAction" id="hiddenAction" src="about:blank" style="display:none;"></iframe>
+ <iframe name="nfileIFrame" frameborder="0" width="0" height="0" src="about:blank" style="display:none;"></iframe>
+ <!-- <div id="minical" oncontextmenu='return false' ondragstart='return false' onselectstart='return false' style="background:buttonface; margin:5; padding:5;margin-top:2;border-top:1 solid buttonshadow;border-left: 1 solid buttonshadow;border-right: 1 solid buttonshadow;border-bottom:1 solid buttonshadow;width:160;display:none;position: absolute; z-index: 99"></div> -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 936851628;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/936851628/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+</body>
+
+</html>

@@ -14,11 +14,11 @@ customwebsite::customwebsite(QWidget *parent) :
 
 
     // button make
-    daumButton = new QPushButton(tr("&다음"));
+    daumButton = new QPushButton(tr("&DAUM"));
     destinyButton = new QPushButton(tr("&Destiny2"));
-    humanButton = new QPushButton(tr("웃긴대학"));
-    gmailButton = new QPushButton(tr("Gmail"));
-    closeButton = new QPushButton(tr("CLOSE"));
+    humanButton = new QPushButton(tr("&Human"));
+    gmailButton = new QPushButton(tr("&Gmail"));
+    closeButton = new QPushButton(tr("&CLOSE"));
 
     // signal==slot
     connect(daumButton, SIGNAL(clicked()), this, SLOT(daumView()));
